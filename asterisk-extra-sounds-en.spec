@@ -4,7 +4,7 @@
 Summary:	English sound files for the Asterisk PBX and telephony application and toolkit
 Name:		asterisk-extra-sounds-en
 Version:	1.4.8
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	Public Domain
 Group:		System/Servers
 URL:		http://www.asterisk.org/
@@ -57,15 +57,15 @@ done
 %install
 rm -rf %{buildroot}
 
-install -d %{buildroot}%{_datadir}/asterisk/sounds
+install -d %{buildroot}/var/lib/asterisk/sounds
 
-find . -maxdepth 1 -not -iname . -exec cp -aRf {} %{buildroot}%{_datadir}/asterisk/sounds/ \;
+find . -maxdepth 1 -not -iname . -exec cp -aRf {} %{buildroot}/var/lib/asterisk/sounds/ \;
 
 # cleanup
-rm -f %{buildroot}%{_datadir}/asterisk/sounds/*-asterisk-extra-*-%{version}
+rm -f %{buildroot}/var/lib/asterisk/sounds/*-asterisk-extra-*-%{version}
 
 # make a file list
-find %{buildroot}%{_datadir}/asterisk/sounds -type f | sed -e "s|%{buildroot}||" | sed -e 's/^/%attr(0644,root,root) /' >> %{name}.filelist
+find %{buildroot}/var/lib/asterisk/sounds -type f | sed -e "s|%{buildroot}||" | sed -e 's/^/%attr(0644,root,root) /' >> %{name}.filelist
 
 %clean
 rm -rf %{buildroot}
