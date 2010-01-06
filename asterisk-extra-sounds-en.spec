@@ -3,11 +3,12 @@
 
 Summary:	English sound files for the Asterisk PBX and telephony application and toolkit
 Name:		asterisk-extra-sounds-en
-Version:	1.4.9
-Release:	%mkrel 2
+Version:	1.4.10
+Release:	%mkrel 1
 License:	Public Domain
 Group:		System/Servers
 URL:		http://www.asterisk.org/
+#for FMT in alaw g722 g729 gsm sln16 ulaw wav siren7 siren14; do wget -P SOURCES/ -c http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-extra-sounds-en-${FMT}-1.4.10.tar.gz ; done
 Source0:	http://ftp.digium.com/pub/telephony/sounds/%{name}-alaw-%{version}.tar.gz
 Source1:	http://ftp.digium.com/pub/telephony/sounds/%{name}-g722-%{version}.tar.gz
 Source2:	http://ftp.digium.com/pub/telephony/sounds/%{name}-g729-%{version}.tar.gz
@@ -18,7 +19,7 @@ Source6:	http://ftp.digium.com/pub/telephony/sounds/%{name}-sln16-%{version}.tar
 Source7:	http://ftp.digium.com/pub/telephony/sounds/%{name}-ulaw-%{version}.tar.gz
 Source8:	http://ftp.digium.com/pub/telephony/sounds/%{name}-wav-%{version}.tar.gz
 Requires:	asterisk
-Provides:	asterisk-extra-sounds
+Provides:	asterisk-extra-sounds = %{version}
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
