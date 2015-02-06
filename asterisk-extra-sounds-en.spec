@@ -4,7 +4,7 @@
 Summary:	English sound files for the Asterisk PBX and telephony application and toolkit
 Name:		asterisk-extra-sounds-en
 Version:	1.4.11
-Release:	%mkrel 1
+Release:	2
 License:	Public Domain
 Group:		System/Servers
 URL:		http://www.asterisk.org/
