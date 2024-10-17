@@ -7,7 +7,7 @@ Version:	1.4.11
 Release:	2
 License:	Public Domain
 Group:		System/Servers
-URL:		http://www.asterisk.org/
+URL:		https://www.asterisk.org/
 #for FMT in alaw g722 g729 gsm sln16 ulaw wav siren7 siren14; do wget -P SOURCES/ -c http://downloads.asterisk.org/pub/telephony/sounds/releases/asterisk-extra-sounds-en-${FMT}-1.4.10.tar.gz ; done
 Source0:	http://ftp.digium.com/pub/telephony/sounds/%{name}-alaw-%{version}.tar.gz
 Source1:	http://ftp.digium.com/pub/telephony/sounds/%{name}-g722-%{version}.tar.gz
